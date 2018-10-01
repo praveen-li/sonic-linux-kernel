@@ -1,5 +1,6 @@
 .ONESHELL:
 SHELL = /bin/bash
+.SHELLFLAGS += -e
 
 KVERSION_SHORT ?= 3.16.0-5
 KVERSION ?= $(KVERSION_SHORT)-amd64
@@ -32,6 +33,7 @@ $(addprefix $(DEST)/, $(MAIN_TARGET)): $(DEST)/% :
 	pushd $(BUILD_DIR)
 	git init
 	git add -f *
+	git commit -m "original source files"
 
 	# patch debian changelog and update kernel package version
 	git am ../patch/changelog.patch
@@ -43,10 +45,14 @@ $(addprefix $(DEST)/, $(MAIN_TARGET)): $(DEST)/% :
 	fakeroot make -f debian/rules.gen setup_amd64_none_amd64
 
 	# Applying patches and configuration changes
+	git diff
 	git add debian/build/build_amd64_none_amd64/.config -f
+	git add debian/config.defines.dump -f
 	git commit -m "unmodified debian source"
 	stg init
 	stg import -s ../patch/series
+	stg status
+	stg series
 
 	# Building a custom kernel from Debian kernel source
 	fakeroot make -f debian/rules.gen -j $(shell nproc) binary-arch_amd64_none
