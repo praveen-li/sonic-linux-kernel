@@ -36,3 +36,8 @@ driver-i2c-bus-ismt-i801-support-intel-denverton.patch
 driver-hwmon-max31790.patch
 driver-support-optoe.patch
 driver-support-optoe-EOF_fix.patch
+driver-hwmon-pmbus-cisco-solvan.patch
+include-asm-generic-gpio-ARCH_NR_GPIOs-512.patch
+kernel-kexec-add-reboot-string.patch
+config-cisco-n9200.patch
+
