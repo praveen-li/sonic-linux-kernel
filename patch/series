@@ -23,7 +23,6 @@ driver-support-sff-8436-read-write-fix.patch
 driver-i2c-bus-intel-ismt-add-delay-param.patch
 driver-pca954x-i2c-mux-force-deselect-on-exit-flag.patch
 kernel-add-kexec-reboot-string.patch
-kernel_csum_complete_sw_skb_copy_and_csum_datagram.patch
 driver-hwmon-max6620.patch
 driver-hwmon-max6620-fix-rpm-calc.patch
 driver-hwmon-max6620-update.patch
