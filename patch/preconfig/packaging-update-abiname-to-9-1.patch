@@ -1,0 +1,19 @@
+commit e6afd2d20fe3ac597442fc8ca9028624ae08c1b2
+Author: Praveen Chaudhary <pchaudhary@linkedin.com>
+Date:   Wed Jan 6 16:29:38 2021 -0800
+
+    Update debian abiname to 9-1
+
+    Signed-off-by: Praveen Chaudhary <pchaudhary@linkedin.com>
+
+diff --git a/debian/config/defines b/debian/config/defines
+index 614f300..ddea1bd 100644
+--- a/debian/config/defines
++++ b/debian/config/defines
+@@ -1,5 +1,5 @@
+ [abi]
+-abiname: 9
++abiname: 9-1
+ ignore-changes:
+  __cpuhp_*
+  bpf_analyzer
