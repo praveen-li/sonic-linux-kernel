@@ -1,0 +1,19 @@
+commit bdb17b4df14816f61df9fabafd425acdbc90d59f
+Author: Praveen Chaudhary <pchaudhary@linkedin.com>
+Date:   Thu Feb 4 18:02:49 2021 -0800
+
+    Update debian abiname to 14-1
+    
+    Signed-off-by: Praveen Chaudhary <pchaudhary@linkedin.com>
+
+diff --git a/debian/config/defines b/debian/config/defines
+index 2a3ee4c..f6a19c7 100644
+--- a/debian/config/defines
++++ b/debian/config/defines
+@@ -1,5 +1,5 @@
+ [abi]
+-abiname: 14
++abiname: 14-1
+ ignore-changes:
+  __cpuhp_*
+  bpf_analyzer
